@@ -3,12 +3,13 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+.main {
+}
 .header {
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
-
 .title {
   font-size: 34px;
   font-weight: 300;
@@ -28,6 +29,7 @@
 
 .orderCall,
 .menu {
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   height: 62px;
@@ -35,8 +37,6 @@
 }
 
 .orderCall {
-  position: relative;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
 }
 
 .orderCall-content {
@@ -52,6 +52,9 @@
 }
 
 .orderCall-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
   display: flex;
   width: 184px;
   height: 37px;
@@ -60,20 +63,14 @@
   border-radius: 10px;
   align-items: center;
   justify-content: center;
-}
-
-.orderCall-button:hover {
-  background-color: #ff9500;
-}
-
-.orderCall-content__link {
-  padding: 7% 0;
-  width: 100%;
   color: white;
-  text-decoration: none;
   font-weight: bold;
   font-size: 13px;
   text-align: center;
+}
+
+.orderCall-button:hover {
+  background-color: #ff8000;
 }
 
 .menu {
@@ -129,17 +126,38 @@
 .menu-list__link:hover {
   color: #ffa019;
 }
+.menu-burger-list {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  list-style: none;
+  padding-inline-start: 0;
+  margin-top: 428px;
+  gap: 2px;
+  right: 0;
+}
+.menu-burger-list__item {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 50px;
+  width: 25vw;
+  background: #ffa019;
+  border-radius: 10px 0 0 10px;
 
+}
+.menu-burger-list__item > .menu-list__link {
+  color: white;
+}
 .main {
+
 }
 .heading {
-  position: relative;
   z-index: -1;
   overflow: hidden;
   display: flex;
   text-align: center;
   align-items: center;
-  margin: auto;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Images/bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -147,7 +165,7 @@
 }
 .heading-content {
   color: white;
-  padding: calc(124px + 12%) 0;
+  padding: calc(124px + 13%) 0;
 }
 .heading__title {
   font-weight: 300;
@@ -168,11 +186,18 @@
   border-radius: 10px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  text-decoration: none;
 }
-.heading-button__link {
+.heading-button:hover {
+  background-color: #ffa019;
+}
+.heading-button:hover .heading-button__text {
+  color: white;
+}
+.heading-button__text {
   padding: 9% 0;
   width: 100%;
-  text-decoration: none;
   color: black;
   font-weight: 700;
   font-size: 12px;

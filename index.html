@@ -18,15 +18,13 @@
         <span class="orderCall__text">
           Мы всегда рады помочь по телефону +7 923 398 9013
         </span>
-        <div class="orderCall-button">
-          <a href="#" class="orderCall-content__link">ЗАКАЗАТЬ ЗВОНОК</a>
-        </div>
+        <button class="orderCall-button">ЗАКАЗАТЬ ЗВОНОК</button>
       </div>
     </section>
     <section class="menu">
       <div class="menu-content container">
         <h2 class="menu__title">My-Giro</h2>
-        <button class="menu-burger">
+        <button id="burger" class="menu-burger">
           <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_429_11066)">
               <path class="menu-burger__icon" d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" stroke="#292929" stroke-width="2.5"
@@ -39,30 +37,53 @@
             </defs>
           </svg>
         </button>
-        <ul class="menu-list">
+        <ul  class="menu-list">
           <li class="menu-list__item">
-            <a href="#" class="menu-list__link">ПРЕИМУЩЕСТВО</a>
+            <a href="#advantages" class="menu-list__link">ПРЕИМУЩЕСТВО</a>
           </li>
           <li class="menu-list__item">
-            <a href="#" class="menu-list__link">О НАС</a>
+            <a href="#aboutus" class="menu-list__link">О НАС</a>
           </li>
           <li class="menu-list__item">
-            <a href="#" class="menu-list__link">ОСОБЕННОСТИ</a>
+            <a href="#gyroscuters" class="menu-list__link">ОСОБЕННОСТИ</a>
           </li>
           <li class="menu-list__item">
-            <a href="#" class="menu-list__link">КАТАЛОГ</a>
+            <a href="#catalog" class="menu-list__link">КАТАЛОГ</a>
           </li>
           <li class="menu-list__item">
-            <a href="#" class="menu-list__link">КОМАНДА</a>
+            <a href="#consultants" class="menu-list__link">КОМАНДА</a>
           </li>
           <li class="menu-list__item">
-            <a href="#" class="menu-list__link">БРЕНДЫ</a>
+            <a href="#brands" class="menu-list__link">БРЕНДЫ</a>
           </li>
           <li class="menu-list__item">
-            <a href="#" class="menu-list__link">ПОЛЕЗНОЕ</a>
+            <a href="#usefulinfo" class="menu-list__link">ПОЛЕЗНОЕ</a>
           </li>
         </ul>
       </div>
+      <ul id="burgerList" class="menu-burger-list container">
+        <li class="menu-burger-list__item">
+          <a href="#advantages" class="menu-list__link">ПРЕИМУЩЕСТВО</a>
+        </li>
+        <li class="menu-burger-list__item">
+          <a href="#aboutus" class="menu-list__link">О НАС</a>
+        </li>
+        <li class="menu-burger-list__item">
+          <a href="#gyroscuters" class="menu-list__link">ОСОБЕННОСТИ</a>
+        </li>
+        <li class="menu-burger-list__item">
+          <a href="#catalog" class="menu-list__link">КАТАЛОГ</a>
+        </li>
+        <li class="menu-burger-list__item">
+          <a href="#consultants" class="menu-list__link">КОМАНДА</a>
+        </li>
+        <li class="menu-burger-list__item">
+          <a href="#brands" class="menu-list__link">БРЕНДЫ</a>
+        </li>
+        <li class="menu-burger-list__item">
+          <a href="#usefulinfo" class="menu-list__link">ПОЛЕЗНОЕ</a>
+        </li>
+      </ul>
     </section>
   </header>
   <main class="main">
@@ -73,13 +94,13 @@
           Крупнейший интернет-магазин гироскутеров, сигвеев и электросамокатов
           от известных мировых производителей
         </p>
-        <div class="heading-button">
-          <a href="#" class="heading-button__link">В КАТАЛОГ</a>
-        </div>
+        <a href="#catalog" class="heading-button">
+          <span  class="heading-button__text">В КАТАЛОГ</span>
+        </a>
       </div>
     </section>
     <section class="advantages container">
-      <h2 class="advantages__title title">Наши преимущества</h2>
+      <h2 id="advantages" class="advantages__title title">Наши преимущества</h2>
       <div class="advantages-arrows">
         <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M20 21L2 11.6L19.3 1L20 21Z" stroke="black" stroke-miterlimit="100" />
@@ -110,7 +131,7 @@
     </section>
     <section class="aboutus">
       <div class="aboutus-content container">
-        <h2 class="aboutus__title title">О нас</h2>
+        <h2 id="aboutus" class="aboutus__title title">О нас</h2>
         <div class="aboutus-textblock">
           <p class="aboutus__text text">
             В нашем интернет-магазине представлен большой выбор гироскутеров,
@@ -141,7 +162,7 @@
       </div>
     </section>
     <section class="gyroscuters container">
-      <h2 class="gyroscuters__title">Особенности гироскутеров</h2>
+      <h2 id="gyroscuters" class="gyroscuters__title">Особенности гироскутеров</h2>
       <div class="gyroscuters-features">
         <p class="gyroscuters__text">
           - Трясёт<br />
@@ -166,7 +187,7 @@
     </section>
     <section class="catalog">
       <div class="catalog-content container">
-        <h2 class="catalog__title">Каталог</h2>
+        <h2 id="catalog" class="catalog__title">Каталог</h2>
         <ul class="catalog-filtr">
           <li class="catalog-filtr__item catalog-filtr__item--active" onclick="toggleActive(this)">
             <span class="catalog-filtr__text">Все</span>
@@ -226,7 +247,7 @@
       </div>
     </section>
     <section class="consultants container">
-      <h2 class="consultants__title">Наши консультанты</h2>
+      <h2 id="consultants" class="consultants__title">Наши консультанты</h2>
       <ul class="consultants-list">
         <li class="consultants-list__item">
           <img src="Images/Консультанты/Иван Алексеев менеджер по продажам.jpg" alt="Консультант"
@@ -264,7 +285,7 @@
       </ul>
     </section>
     <section class="brands">
-      <ul class="brands-list">
+      <ul id="brands" class="brands-list">
         <li class="brands-list__item">
           <span class="brands-list__text">XIAOMI</span>
         </li>
@@ -289,7 +310,7 @@
       </ul>
     </section>
     <section class="usefulinfo container">
-      <h2 class="usefulinfo-title">Полезная информация</h2>
+      <h2 id="usefulinfo" class="usefulinfo-title">Полезная информация</h2>
       <ul class="usefulinfo-list">
         <li class="usefulinfo-list-card">
           <img src="Images/Полезная информация/1.jpg" alt="Полезная информация" class="usefulinfo-list-card__img">
@@ -325,15 +346,15 @@
       <section class="footer-right">
         <div class="footer-right-linksblock">
           <h3 class="footer-right__title">КОМПАНИЯ MY-GIRO</h3>
-          <a href="" class="footer-right__link">О нас</a>
-          <a href="" class="footer-right__link">Наши преимущества</a>
-          <a href="" class="footer-right__link">Наши консультанты</a>
+          <a href="#aboutus" class="footer-right__link">О нас</a>
+          <a href="#advantages" class="footer-right__link">Наши преимущества</a>
+          <a href="#consultants" class="footer-right__link">Наши консультанты</a>
         </div>
         <div class="footer-right-linksblock">
           <h3 class="footer-right__title">ПОКУПАТЕЛЯМ</h3>
-          <a href="" class="footer-right__link">Каталог</a>
-          <a href="" class="footer-right__link">Бренды</a>
-          <a href="" class="footer-right__link">Полезная информация</a>
+          <a href="#catalog" class="footer-right__link">Каталог</a>
+          <a href="#brands" class="footer-right__link">Бренды</a>
+          <a href="#usefulinfo" class="footer-right__link">Полезная информация</a>
         </div>
         <div class="footer-right-linksblock">
           <h3 class="footer-right__title">ПОМОЩЬ</h3>
