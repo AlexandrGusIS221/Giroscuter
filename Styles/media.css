@@ -1,0 +1,53 @@
+@media (max-width: 996px) {
+    .title {
+      font-size: 28px;
+    }
+  
+    .text {
+      font-size: 18px;
+    }
+  
+    .orderCall {
+      height: 50px;
+    }
+  
+    .orderCall-button {
+      width: 150px;
+    }
+  
+    .menu__title {
+      font-size: 24px;
+    }
+  
+    .menu-list {
+        gap: 20px;
+    }
+  }
+  
+  @media (max-width: 776px) {
+    .menu-list {
+      display: none;
+    }
+  
+    .menu-burger {
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 666px) {
+    .orderCall__text {
+      font-size: 12px;
+    }
+  
+    .orderCall-button {
+      width: 125px;
+    }
+  
+    .orderCall-content__link {
+      font-size: 10px;
+    }
+  
+    .aboutus-subscribe__text {
+      display: none;
+    }
+  }
