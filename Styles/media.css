@@ -1,3 +1,27 @@
+@media (max-width: 1440px) {
+  .brands-list {
+    gap: 60px;
+  }
+  .brands-list__text {
+    font-size: 36px;
+  }
+}
+@media (max-width: 1280px) {
+  .brands-list {
+    gap: 50px;
+  }
+  .brands-list__text {
+    font-size: 32px;
+  }
+}
+@media (max-width: 1067px) {
+  .brands-list {
+    gap: 40px;
+  }
+  .brands-list__text {
+    font-size: 28px;
+  }
+}
 @media (max-width: 996px) {
     .title {
       font-size: 28px;
@@ -13,6 +37,7 @@
   
     .orderCall-button {
       width: 150px;
+      font-size: 12px;
     }
   
     .menu__title {
@@ -41,13 +66,26 @@
   
     .orderCall-button {
       width: 125px;
+      font-size: 10px;
     }
   
     .orderCall-content__link {
       font-size: 10px;
     }
-  
+    .aboutus-subscribe-content {
+      flex-direction: column;
+      gap:10px;
+    }
     .aboutus-subscribe__text {
-      display: none;
+      text-align: center;
+    }
+    .subscribe-name{
+      margin-left: 0;
+    }
+    .subscribe-email{
+      margin-left: 0;
+    }
+    .subscribe-button{
+      margin-left: 0;
     }
   }

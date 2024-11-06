@@ -132,15 +132,16 @@
   position: fixed;
   list-style: none;
   padding-inline-start: 0;
-  margin-top: 428px;
-  gap: 2px;
+  margin-top: 278px;
+  margin-right: -10px;
+  gap: 1px;
   right: 0;
 }
 .menu-burger-list__item {
   display: flex;
   justify-content: center;
   align-items:center;
-  height: 50px;
+  height: 30px;
   width: 25vw;
   background: #ffa019;
   border-radius: 10px 0 0 10px;
@@ -236,13 +237,6 @@
 .aboutus {
   margin-top: 120px;
   margin-bottom: 60px;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    transparent calc(100% - 94px),
-    #ffa019 calc(100% - 94px),
-    #ffa019 100%
-  );
 }
 .aboutus-content {
 }
@@ -256,10 +250,12 @@
   margin-bottom: 30px;
 }
 .aboutus-subscribe {
+  background: #ffa019;
+}
+.aboutus-subscribe-content {
   display: flex;
-  height: 94px;
   align-items: center;
-  margin-top: 60px;
+  padding: 30px 0;
 }
 .aboutus-subscribe__text {
   color: #ffffff;
@@ -271,32 +267,41 @@
   display: flex;
   width: 225px;
   height: 44px;
-  border: 1px solid #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   align-items: center;
-  margin-left: 115px;
-  opacity: 0.5;
   margin-left: auto;
 }
-.subscribe-name__text {
+.subscribe-name__input {
   color: #fff;
   margin-left: 20px;
   font-weight: 400;
   font-size: 14px;
+  border: none;
+  background: none;
+}
+.subscribe-name__input::placeholder{
+  color: #fff;
+  opacity: 0.5;
 }
 .subscribe-email {
   display: flex;
   width: 225px;
   height: 44px;
-  border: 1px solid #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   align-items: center;
   margin-left: 20px;
-  opacity: 0.5;
 }
-.subscribe-emai__text {
-  margin-left: 20px;
+.subscribe-email__input {
   color: #fff;
+  margin-left: 20px;
   font-weight: 400;
   font-size: 14px;
+  border: none;
+  background: none;
+}
+.subscribe-email__input::placeholder{
+  color: #fff;
+  opacity: 0.5;
 }
 .subscribe-button {
   display: flex;
@@ -306,10 +311,14 @@
   align-items: center;
   margin-left: 33px;
   justify-content: center;
-}
-.subscribe-button__text {
+  border: none;
   font-weight: 700;
   font-size: 14px;
+  cursor: pointer;
+}
+.subscribe-button:hover {
+  color: #ffa019;
+
 }
 .gyroscuters {
   margin-bottom: 60px;
@@ -397,6 +406,10 @@
   background-color: #ffffff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   z-index: 0;
+}
+.catalog-cards__item:hover .catalog-cards__model{
+  color: #ffa019;
+  font-weight:400;
 }
 .catalog-cards__link {
   color: #000000;
@@ -496,6 +509,10 @@
   height: 28px;
   background: #ffa019;
   border-radius: 10px;
+  cursor: pointer;
+}
+.consultants-list__button:hover {
+  background-color: #ff8000;
 }
 .consultants-list__text {
   color: white;
@@ -525,6 +542,10 @@
   color: #9b9b9b;
   font-weight: 700;
   font-size: 50px;
+  text-decoration: none;
+}
+.brands-list__text:hover {
+  color: #ffa019;
 }
 
 .usefulinfo {
@@ -543,12 +564,15 @@
   margin-top: 60px;
 }
 .usefulinfo-list-card {
+}
+.usefulinfo-list-card__link {
   position: relative;
   display: flex;
   width: 261px;
   height: 261px;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 .usefulinfo-list-card__img {
   position: absolute;

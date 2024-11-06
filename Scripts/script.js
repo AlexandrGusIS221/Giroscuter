@@ -21,6 +21,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
 const button = document.getElementById('burger');
 const burgerlist = document.getElementById('burgerList');
 
@@ -32,3 +33,4 @@ button.addEventListener('click', function() {
         burgerlist.style.display = 'flex';
     }
 });
+
