@@ -1,12 +1,17 @@
-function toggleActive(selectedItem) {
-    const items = document.querySelectorAll('.catalog-filtr__item');
+const button = document.getElementById('burger');
+const burgerlist = document.getElementById('burgerList');
 
-    items.forEach(item => {
-        item.classList.remove('catalog-filtr__item--active');
-    });
+const cardItems = document.querySelectorAll('.catalog-cards__link');
 
-    selectedItem.classList.add('catalog-filtr__item--active');
-}
+button.addEventListener('click', function() {
+    if(burgerlist.style.display == 'flex'){
+        burgerlist.style.display = 'none';
+    }
+    else{
+        burgerlist.style.display = 'flex';
+    }
+});
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault(); // Отменяем стандартное поведение ссылки
@@ -22,15 +27,59 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-const button = document.getElementById('burger');
-const burgerlist = document.getElementById('burgerList');
+function toggleActive(selectedItem) {
+    const items = document.querySelectorAll('.catalog-filtr__item');
 
-button.addEventListener('click', function() {
-    if(burgerlist.style.display == 'flex'){
-        burgerlist.style.display = 'none';
-    }
-    else{
-        burgerlist.style.display = 'flex';
-    }
-});
+    items.forEach(item => {
+        item.classList.remove('catalog-filtr__item--active');
+    });
 
+    selectedItem.classList.add('catalog-filtr__item--active');
+
+    const selectedCategory = selectedItem.querySelector('.catalog-filtr__text').textContent;
+    filterCards(selectedCategory);
+}
+
+
+const cardData = [
+    {category: "Сигвеи", image: "Images/Список товаров/Сигвеи/1.jpg", model: "Xiaomi Ninebot mini Pro While (Белый)", cost: "31 480 р.", link: "#"},
+    {category: "Сигвеи", image: "Images/Список товаров/Сигвеи/2.jpg", model: "Xiaomi Ninebot mini Pro While (Белый)", cost: "31 480 р.", link: "#"},
+    {category: "Сигвеи", image: "Images/Список товаров/Сигвеи/3.jpg", model: "Xiaomi Ninebot mini Pro While (Белый)", cost: "31 480 р.", link: "#"},
+    {category: "Гироскутеры", image: "Images/Список товаров/Гироскутеры/1.jpg", model: "Xiaomi Ninebot mini Pro While (Белый)", cost: "31 480 р.", link: "#"},
+    {category: "Гироскутеры", image: "Images/Список товаров/Гироскутеры/2.jpg", model: "Xiaomi Ninebot mini Pro While (Белый)", cost: "31 480 р.", link: "#"},
+    {category: "Гироскутеры", image: "Images/Список товаров/Гироскутеры/3.jpg", model: "Xiaomi Ninebot mini Pro While (Белый)", cost: "31 480 р.", link: "#"},
+    {category: "Электросамокаты", image: "Images/Список товаров/Электросамокаты/1.jpg", model: "Xiaomi Ninebot mini Pro While (Белый)", cost: "31 480 р.", link: "#"},
+    {category: "Электросамокаты", image: "Images/Список товаров/Электросамокаты/2.jpg", model: "Xiaomi Ninebot mini Pro While (Белый)", cost: "31 480 р.", link: "#"},
+    {category: "Электросамокаты", image: "Images/Список товаров/Электросамокаты/3.jpg", model: "Xiaomi Ninebot mini Pro While (Белый)", cost: "31 480 р.", link: "#"},
+    {category: "Сигвеи", image: "Images/Список товаров/Сигвеи/1.jpg", model: "Xiaomi Ninebot mini Pro While (Белый)", cost: "31 480 р.", link: "#"},
+    {category: "Сигвеи", image: "Images/Список товаров/Сигвеи/2.jpg", model: "Xiaomi Ninebot mini Pro While (Белый)", cost: "31 480 р.", link: "#"},
+    {category: "Сигвеи", image: "Images/Список товаров/Сигвеи/3.jpg", model: "Xiaomi Ninebot mini Pro While (Белый)", cost: "31 480 р.", link: "#"},
+    {category: "Гироскутеры", image: "Images/Список товаров/Гироскутеры/1.jpg", model: "Xiaomi Ninebot mini Pro While (Белый)", cost: "31 480 р.", link: "#"},
+    {category: "Гироскутеры", image: "Images/Список товаров/Гироскутеры/2.jpg", model: "Xiaomi Ninebot mini Pro While (Белый)", cost: "31 480 р.", link: "#"},
+    {category: "Гироскутеры", image: "Images/Список товаров/Гироскутеры/3.jpg", model: "Xiaomi Ninebot mini Pro While (Белый)", cost: "31 480 р.", link: "#"},
+    {category: "Электросамокаты", image: "Images/Список товаров/Электросамокаты/1.jpg", model: "Xiaomi Ninebot mini Pro While (Белый)", cost: "31 480 р.", link: "#"},
+    {category: "Электросамокаты", image: "Images/Список товаров/Электросамокаты/2.jpg", model: "Xiaomi Ninebot mini Pro While (Белый)", cost: "31 480 р.", link: "#"},
+    {category: "Электросамокаты", image: "Images/Список товаров/Электросамокаты/3.jpg", model: "Xiaomi Ninebot mini Pro While (Белый)", cost: "31 480 р.", link: "#"}
+];
+
+function filterCards(category) {
+    const cardItems = document.querySelectorAll('.catalog-cards__item');
+
+    dataCards = filterByCategory(cardData, category);
+    
+    for(let i = 0; i < 4; i++){
+        cardItems[i].innerHTML = `
+            <a href="${dataCards[i].link}" class="catalog-cards__link">
+              <div class="catalog-category">
+                <span class="catalog-category__text">${dataCards[i].category}</span>
+              </div>
+              <img src="${dataCards[i].image}" alt="Гироскутер" class="catalog-cards__img" /><span
+                class="catalog-cards__model">${dataCards[i].model}</span><span
+                class="catalog-cards__cost">${dataCards[i].cost}</span>
+            </a>`;
+    }
+}
+
+function filterByCategory(array, category) {
+    return array.filter(cardData => cardData.category === category);
+}

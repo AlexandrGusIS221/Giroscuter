@@ -3,8 +3,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-.main {
-}
 .header {
   position: fixed;
   width: 100%;
@@ -35,10 +33,6 @@
   height: 62px;
   background-color: white;
 }
-
-.orderCall {
-}
-
 .orderCall-content {
   width: 100%;
   display: flex;
@@ -51,10 +45,7 @@
   margin-right: 20px;
 }
 
-.orderCall-button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
+.orderCall-link {
   display: flex;
   width: 184px;
   height: 37px;
@@ -67,13 +58,11 @@
   font-weight: bold;
   font-size: 13px;
   text-align: center;
+  text-decoration: none;
 }
 
 .orderCall-button:hover {
   background-color: #ff8000;
-}
-
-.menu {
 }
 
 .menu-content {
@@ -93,9 +82,6 @@
   border: none;
   cursor: pointer;
   size: 100%;
-}
-
-.menu-burger__icon {
 }
 
 .menu-burger:hover .menu-burger__icon {
@@ -149,9 +135,6 @@
 }
 .menu-burger-list__item > .menu-list__link {
   color: white;
-}
-.main {
-
 }
 .heading {
   z-index: -1;
@@ -209,8 +192,6 @@
   align-items: center;
   margin-top: 120px;
 }
-.advantages__title {
-}
 .advantages-arrows {
   margin-left: auto;
 }
@@ -229,16 +210,12 @@
   justify-content: center;
   min-height: 180px;
 }
-.advantages-cards__img {
-}
 .advantages-cards__text {
   margin-top: auto;
 }
 .aboutus {
   margin-top: 120px;
   margin-bottom: 60px;
-}
-.aboutus-content {
 }
 .aboutus__title {
   margin-bottom: 60px;
@@ -343,7 +320,8 @@
   font-weight: 300;
   font-size: 20px;
   line-height: 150%;
-  letter-spacing: -0.1px;
+  display: grid;
+  grid-row: auto;
 }
 .catalog {
   background-color: #fbfbfb;
@@ -455,8 +433,6 @@
   margin: 20px;
   margin-top: 0;
 }
-.consultants {
-}
 .consultants__title {
   font-weight: 300;
   font-size: 34px;
@@ -536,8 +512,6 @@
   gap: 70px;
   justify-content: center;
 }
-.brands-list__item {
-}
 .brands-list__text {
   color: #9b9b9b;
   font-weight: 700;
@@ -562,8 +536,6 @@
   gap: 30px;
   padding-inline-start: 0;
   margin-top: 60px;
-}
-.usefulinfo-list-card {
 }
 .usefulinfo-list-card__link {
   position: relative;
